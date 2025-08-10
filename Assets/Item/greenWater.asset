@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: greenWater
   m_EditorClassIdentifier: 
   prefab: {fileID: 2373019553121587888, guid: 62c969362d24f494da0932d1ade96b41, type: 3}
-  _name: ???
+  _name: GreenWater
   _image: {fileID: 21300000, guid: 3eb13d1847b7ffb41a57a5c21993bb5d, type: 3}
-  _num: 4
+  _num: 1
   _Info: A Glass Of Strange Water
   canPut: 1
   canEat: 0

@@ -7,6 +7,7 @@ public class CatController : MonoBehaviour
     public float Speed;
     private Animator anim;
     public Rigidbody2D rb;
+    public Vector2 direction;
     
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class CatController : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
-        Vector2 direction = new Vector2(moveX, moveY).normalized;
+        direction = new Vector2(moveX, moveY).normalized;
 
         rb.velocity = direction * Speed;
 

@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - items
+  - Land
+  - tools
+  - UI
+  - slot
+  - bag
+  - Put
+  - dialogs
+  - other
+  - choice
   layers:
   - Default
   - TransparentFX

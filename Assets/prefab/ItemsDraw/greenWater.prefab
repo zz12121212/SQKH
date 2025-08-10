@@ -161,4 +161,5 @@ MonoBehaviour:
   _this: {fileID: 2373019553121587888}
   thisItem: {fileID: 11400000, guid: 1ed46bdb5f60e1542a396f158f02ffb4, type: 2}
   thisBag: {fileID: 11400000, guid: b877fa0d002696f4a8fab9d8c3e1dc36, type: 2}
+  toolsBag: {fileID: 11400000, guid: c4c529a5449c69c44bd7d952c9d0929d, type: 2}
   isGetting: 0
