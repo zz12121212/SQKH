@@ -30,17 +30,19 @@ public class _time:MonoBehaviour{
             if (elapsedSeconds >= 0.5f)
             {
                 elapsedSeconds = 0f;
-                minute += 5;
+                minute += 1;
             }
             if (minute == 10)
             {
                 minuteTen++;
                 minute = 0;
+                SaveTimeData();
             }
             if (minuteTen == 6)
             {
                 hour++;
                 minuteTen = 0;
+            
             }
             if (hour == 10)
             {
@@ -58,12 +60,12 @@ public class _time:MonoBehaviour{
                 day = 1;
                 month++;
             }
-            if (month == 2)
+            if (month == 3)
             {
                 month = 1;
                 counter++;
             }
-            if (counter == 4)
+            if (counter == 5)
             {
                 counter = 0;
                 year++;
@@ -76,19 +78,27 @@ public class _time:MonoBehaviour{
     public static void SaveTimeData()
     {
         PlayerPrefs.SetInt("Year", year);
+        PlayerPrefs.SetInt("counter", counter);
         PlayerPrefs.SetInt("Month", month);
         PlayerPrefs.SetInt("Day", day);
         PlayerPrefs.SetInt("Hour", hour);
+        PlayerPrefs.SetInt("HourTen", hourTen);
         PlayerPrefs.SetInt("Minute", minute);
+        PlayerPrefs.SetInt("MinuteTen", minuteTen);
         PlayerPrefs.Save(); 
     }
 
     public static void LoadTimeData()
     {
-        year = PlayerPrefs.GetInt("Year", 1); 
+        year = PlayerPrefs.GetInt("Year", 1);
+       counter =  PlayerPrefs.GetInt("counter", 1);
         month = PlayerPrefs.GetInt("Month", 1); 
         day = PlayerPrefs.GetInt("Day", 1); 
         hour = PlayerPrefs.GetInt("Hour", 0);
+        hourTen = PlayerPrefs.GetInt("HourTen", 0);
         minute = PlayerPrefs.GetInt("Minute", 0);
+        minuteTen = PlayerPrefs.GetInt("MinuteTen", 0);
     }
+
+
 }

@@ -9,6 +9,7 @@ public class itemOnWorld : MonoBehaviour
     public bag thisBag;
     public bag toolsBag;
    public bool isGetting = false;
+    public GameObject UI;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -17,7 +18,9 @@ public class itemOnWorld : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E)) {
                 isGetting = true;
                 AddNewItem();
-                Destroy(_this);
+            }
+            if (Input.GetKeyDown(KeyCode.Q)&&UI!=null) {
+                UI.SetActive(true);
             }
         }
     }
@@ -39,6 +42,7 @@ public class itemOnWorld : MonoBehaviour
 
                         }
                     }
+                    Destroy(_this);
                     break;
                 }
             }
@@ -47,23 +51,28 @@ public class itemOnWorld : MonoBehaviour
         { 
             if (!thisBag.itemList.Contains(thisItem))
         {
+                bool Added = false;
             for (int i = 0; i < thisBag.itemList.Count; i++)
             {
-                if (thisBag.itemList[i] != null) { }
-                else
-                {
-                        if (thisItem._num <= 0) {
+                if (thisBag.itemList[i] == null)
+                    {
+                        if (thisItem._num <= 0) 
+                        {
                             thisItem._num = 1;
                         }
-                    thisBag.itemList[i] = thisItem;
-                    break;
+                        thisBag.itemList[i] = thisItem;
+                        Added = true;
+                        Destroy(_this);
+                        break;
+                    }
                 }
+                if (Added == false) { return; }
             }
-        }
-        else
+        else 
         {
             thisItem._num += 1;
-        }
+                Destroy(_this);
+            }
 
         }
 

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b0abf8e313797cb41b450e210ffab33c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - text: {instanceID: 0}
+  - image: {instanceID: 0}
+  - record: {fileID: 11400000, guid: 19d2d4433e374f1418b1ceeb550942d0, type: 2}
+  - BagToRead: {fileID: 11400000, guid: b877fa0d002696f4a8fab9d8c3e1dc36, type: 2}
+  - monsterBag: {fileID: 11400000, guid: af9f4a0e64dfaf54db2875da3314459d, type: 2}
+  - monster: {fileID: 11400000, guid: 35f091267907c95449dc69a340362760, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

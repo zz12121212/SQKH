@@ -47,6 +47,7 @@ public class Card : MonoBehaviour
                 UI.SetActive(true);
                 break;
             }
+          
         }
         if (curGameObject != null) {
             GameObject.Destroy(curGameObject);

@@ -13,7 +13,7 @@ public class StartAnim : MonoBehaviour
     }
 
     public void ToStart() {
-        recordPlayer.PlayerType = Type;
+       // recordPlayer.PlayerType = Type;
         anim.SetBool("Open",true);
     }
 

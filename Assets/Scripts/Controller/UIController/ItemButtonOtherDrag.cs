@@ -13,7 +13,7 @@ public class ItemButtonOtherDrag : MonoBehaviour, IBeginDragHandler, IDragHandle
     private bag TheBagBefore;
     private int bagCount;
     public GameObject grid;
-
+    public GameObject otherPrefab;
     private void Start()
     {
         grid = GameObject.FindWithTag("UI").transform.Find("PressR").Find("up").Find("bag").Find("Items").Find("grid").gameObject;
@@ -21,8 +21,8 @@ public class ItemButtonOtherDrag : MonoBehaviour, IBeginDragHandler, IDragHandle
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (transform.parent.parent.gameObject.tag == "bag") { TheBagBefore = PlayerBag; }
-        else if (transform.parent.parent.gameObject.tag == "tools") { TheBagBefore = toolsBag; }
+        if (transform.parent.parent.gameObject.CompareTag("bag")) { TheBagBefore = PlayerBag; }
+        else if (transform.parent.parent.gameObject.CompareTag("tools")) { TheBagBefore = toolsBag; }
         
         oringinalParent = transform.parent;
         transform.SetParent(GameObject.FindWithTag("UI").transform);
@@ -37,7 +37,45 @@ public class ItemButtonOtherDrag : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (eventData.pointerCurrentRaycast.gameObject == null) { return; }
+        if (eventData.pointerCurrentRaycast.gameObject == null)
+        {
+            transform.SetParent(oringinalParent);
+            transform.position = oringinalParent.position;
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
+            return;
+        }
+        if (eventData.pointerCurrentRaycast.gameObject.CompareTag("rubbish")) {
+            if (TheBagBefore == PlayerBag)
+            {
+                TheBagBefore.itemList.Find(item => item == gameObject.GetComponent<ItemButtonOnUI>().item)._num = 1;
+                TheBagBefore.itemList.Remove(TheBagBefore.itemList.Find(item => item == gameObject.GetComponent<ItemButtonOnUI>().item));
+                TheBagBefore.itemList.Add(null);
+                GameObject other = Instantiate<GameObject>(otherPrefab);
+                other.transform.SetParent(oringinalParent);
+                other.transform.position = oringinalParent.transform.position;
+                Destroy(gameObject);
+                return;
+            }
+            else if (TheBagBefore == toolsBag) {
+                TheBagBefore.itemList.Find(item => item == gameObject.GetComponent<ItemButtonOnUI>().item)._num = 1;
+                TheBagBefore.itemList.Remove(TheBagBefore.itemList.Find(item => item == gameObject.GetComponent<ItemButtonOnUI>().item));
+                GameObject other = Instantiate<GameObject>(otherPrefab);
+                other.GetComponent<ItemButtonOnUI>().item = null;
+                other.transform.Find("num").GetComponent<Text>().text = "00";
+                other.transform.SetParent(oringinalParent);
+                other.transform.position = oringinalParent.transform.position;
+                other.SetActive(false);
+                Destroy(gameObject);
+                return;
+            }
+        }
+        if (!eventData.pointerCurrentRaycast.gameObject.CompareTag("slot") && !eventData.pointerCurrentRaycast.gameObject.CompareTag("tools"))
+        {
+            transform.SetParent(oringinalParent);
+            transform.position = oringinalParent.position;
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
+            return;
+        }
         if (eventData.pointerCurrentRaycast.gameObject.name == "iii" && eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.gameObject.tag == "slot") //移动到背包里有物体的位置
         {
             if (TheBagBefore == toolsBag)

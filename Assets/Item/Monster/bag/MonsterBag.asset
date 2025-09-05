@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ff5b4c4c5e8c448a0081c11b4874b2, type: 3}
+  m_Name: MonsterBag
+  m_EditorClassIdentifier: 
+  itemList:
+  - {fileID: 11400000, guid: 5310d38d914ff8948bf282d31690ad69, type: 2}
+  - {fileID: 11400000, guid: 787ee668125e1844dae293280131d888, type: 2}
+  - {fileID: 11400000, guid: 1fe1623ca24609c419cfb35709550af0, type: 2}
+  - {fileID: 11400000, guid: 2f1ed631c6d17f2498308149fe0d16c0, type: 2}
+  - {fileID: 11400000, guid: 79c21292567635b4ebe4e6b46538c095, type: 2}
+  - {fileID: 11400000, guid: 3ea3a9c759a528744979c45ff2198f65, type: 2}
+  - {fileID: 11400000, guid: 6198b68eb6ca78b48b43c07add959070, type: 2}
+  - {fileID: 11400000, guid: 1bd1cd4b2c2d07d4bbc6c3874887e88a, type: 2}

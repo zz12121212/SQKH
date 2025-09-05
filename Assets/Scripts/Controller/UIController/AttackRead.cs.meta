@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cc6617c326a0a9149a33e6a746d3365e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - record: {fileID: 11400000, guid: 19d2d4433e374f1418b1ceeb550942d0, type: 2}
+  - monster: {fileID: 11400000, guid: 7131f6704dadce04eb292555eb6c9ab0, type: 2}
+  - Pet: {instanceID: 0}
+  - Enemy: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

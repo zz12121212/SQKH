@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ff5b4c4c5e8c448a0081c11b4874b2, type: 3}
+  m_Name: MonsterDesk
+  m_EditorClassIdentifier: 
+  itemList:
+  - {fileID: 11400000, guid: 9eef1b8f2746be646ac480d166a2c3c3, type: 2}
+  - {fileID: 11400000, guid: 32e57694d6110a04eb29e018039b5d07, type: 2}
+  - {fileID: 11400000, guid: 45744c769bdbb4c499c12fe5b4dc959f, type: 2}
+  - {fileID: 11400000, guid: 886cd4b742a684f4c9a625bf319589d2, type: 2}
+  - {fileID: 11400000, guid: 91171a72d62a1184c99a7aa348a37fe3, type: 2}
+  - {fileID: 11400000, guid: 4016ea9e5a4a3b5488324d740782a53a, type: 2}
+  - {fileID: 11400000, guid: 57cfafacd52b80a4aa301eadf6efce12, type: 2}
+  - {fileID: 11400000, guid: bc34748a1411ba94f8338155c58b8ead, type: 2}
+  - {fileID: 11400000, guid: c240dfffa377cc64d81e198cb77832b1, type: 2}
+  - {fileID: 11400000, guid: 667e454c6303f374ebc0a7f23ae0eb95, type: 2}
+  - {fileID: 11400000, guid: 49291d08e54d64e4fab486d47dca7308, type: 2}
+  - {fileID: 11400000, guid: c2f8fa127263b0e40a0b7b987543c01f, type: 2}

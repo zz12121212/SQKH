@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2206061768d0622468c059900b84442e, type: 3}
+  m_Name: BloodWater
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5204788717444978337, guid: a65490f1efea68b42895e8bb69bb8af6, type: 3}
+  _name: Blood Water
+  _image: {fileID: -1286543689, guid: b246471ee9ab364438eee919e44b3588, type: 3}
+  _num: 1
+  Money: 2
+  _Info: Can Add 10 Blood
+  canPut: 0
+  canEat: 0
+  medicine: 1
+  pill: 0

@@ -6,27 +6,18 @@ using UnityEngine.UI;
 
 public class setMoney : MonoBehaviour
 {
-    public static setMoney Instance;
-    public static Text money;
+    public  PlayerRecord record;
+    public  Text money;
 
     void Start()
     {
         money = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
         SetMoneyUI();
     }
 
-    public static void  SetMoneyUI() {
+    public void  SetMoneyUI() {
         
-       money.text =":"+ recordPlayer.Money.ToString(); 
+       money.text =":"+ record.Money.ToString(); 
     }
 
 

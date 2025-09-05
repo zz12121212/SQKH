@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2206061768d0622468c059900b84442e, type: 3}
+  m_Name: SlimeEyes
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  _name: Slime Eyes
+  _image: {fileID: 21300000, guid: ba492abe92d86974dbc4af9edd9679a4, type: 3}
+  _num: 1
+  _Info: eyes of the slime
+  canPut: 0
+  canEat: 0
+  medicine: 0
+  pill: 0

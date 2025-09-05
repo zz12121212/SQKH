@@ -7,3 +7,5 @@ public class bag : ScriptableObject
 {
 public List<Items>  itemList = new List<Items>();
 }
+
+

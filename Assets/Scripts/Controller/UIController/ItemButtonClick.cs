@@ -11,10 +11,13 @@ public class ItemButtonClick : MonoBehaviour
 
     private void Start()
     {
-        InFoText = GameObject.FindWithTag("UI").transform.Find("PressR").Find("up").Find("bag").Find("introduce").Find("Text").GetComponent<Text>();
+        if (gameObject.transform.parent.CompareTag("tools")) { return; }
+        InFoText = GameObject.FindWithTag("InFo").GetComponent<Text>();
     }
 
-    public void ClickToInFo() {
+    public void ClickToInFo()
+    {
+        if (gameObject.transform.parent.CompareTag("tools")) { return; }
         if (InFoText.transform.parent.parent.gameObject.activeSelf == false) { return; }
         InFoText.text = InFo;
     }

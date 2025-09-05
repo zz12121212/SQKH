@@ -6,9 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/FightScene.unity
+    guid: c97699ee660d2f347a5ade82bf53a981
+  - enabled: 1
     path: Assets/Scenes/firstScene.unity
     guid: c18b1de56c5fd4b4d84f82e9d1a8c758
   - enabled: 1
+    path: Assets/Scenes/firstStore.unity
+    guid: 3f7661f5e1d41a843829b4ba0e1cc8fd
+  - enabled: 1
+    path: Assets/Scenes/SecondScene.unity
+    guid: 3716a32023a86374ba1e672c2dabe5bd
+  - enabled: 1
+    path: Assets/Scenes/SecondStore.unity
+    guid: 7c60e02bcf20b6241870ae5a7cb00cb9
+  - enabled: 1
+    path: Assets/Scenes/selectBox.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SelectPets.unity
+    guid: 311f997968526a44e8e6b807dc201263
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 9a8e3cac0e124c64581206580318344c
+  - enabled: 1
     path: Assets/Scenes/street.unity
     guid: a22e5f80eacbe5946ad0bedfa9ab0481
+  - enabled: 1
+    path: Assets/Scenes/ThirdStore.unity
+    guid: f1d513ff05d839a41963158cc8cecb85
   m_configObjects: {}

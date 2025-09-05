@@ -24,8 +24,8 @@ public class TouchToB : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            record.GetComponent<setMBE>().AddB(ChangBlood);
-            record.GetComponent<setMBE>().SetValue();
+          //  record.GetComponent<setMBE>().AddB(ChangBlood);
+         //s  record.GetComponent<setMBE>().SetValue();
             direction = rigidbody.gameObject.GetComponent<CatController>().direction;
             isChange = true;
             anim.SetBool("Attacked",true);

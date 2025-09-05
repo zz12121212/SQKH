@@ -15,6 +15,7 @@ public class cover : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("wall")) { return; }
         float collisionY = collision.gameObject.transform.position.y;
         float playerY = transform.position.y;
 

@@ -13,9 +13,6 @@ public class bagController : MonoBehaviour
    
    
     // Start is called before the first frame update
-    private void Start()
-    {
-    }
 
     private void OnEnable()
     {
@@ -35,11 +32,11 @@ public class bagController : MonoBehaviour
         }
     }
 
-    private void SetAButton(GameObject UIprefab,Items item) {
-        UIPrefab.transform.Find("other").GetComponent<ItemButtonClick>().InFo = item._Info;
-        GameObject _other = UIprefab.transform.Find("other").gameObject;
-        GameObject _num = UIprefab.transform.Find("other").Find("num").gameObject;
-        GameObject _image = UIprefab.transform.Find("other").Find("iii").gameObject;
+    private void SetAButton(GameObject _UIprefab,Items item) {
+       _UIprefab.transform.Find("other").GetComponent<ItemButtonClick>().InFo = item._Info;
+        GameObject _other = _UIprefab.transform.Find("other").gameObject;
+        GameObject _num = _UIprefab.transform.Find("other").Find("num").gameObject;
+        GameObject _image = _UIprefab.transform.Find("other").Find("iii").gameObject;
         _other.SetActive(true);
         _num.GetComponent<Text>().text = item._num.ToString();
         _image.GetComponent<Image>().sprite = item._image;
@@ -47,24 +44,30 @@ public class bagController : MonoBehaviour
     }
 
     public void resetTheBag(bag TheBag) {
-        for (int i = 0; i < TheBag.itemList.Count; i++)
-        {
-          
-            if (TheBag.itemList[i] != null &&TheBag.itemList[i]._num <= 0) {
+        for (int i = 0; i <TheBag.itemList.Count ; i++)
+        {  if (TheBag.itemList[i] != null && TheBag.itemList[i]._num <= 0)
+            {
                 TheBag.itemList[i]._num = 1;
                 TheBag.itemList.Remove(TheBag.itemList[i]);
+                TheBag.itemList.Add(null);
+                continue;
             }
-            else if (TheBag.itemList[i] != null)
+             else if (TheBag.itemList[i] != null)
             {
                 TheItem = Instantiate(UIPrefab);
                 SetAButton(TheItem, TheBag.itemList[i]);
                 TheItem.transform.SetParent(grid.transform);
+                TheItem = null;
+                continue;
             }
             else
             {
                 TheItem = Instantiate(UIPrefab);
                 TheItem.transform.SetParent(grid.transform);
+                TheItem = null;
+                continue;
             }
+           
         }
     }
 }

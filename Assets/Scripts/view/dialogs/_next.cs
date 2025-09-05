@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class _next : MonoBehaviour
 {
-    private Dialog[] dialogs;
+    private string[] dialogs;
     public GameObject EndAction;
-    public Text _Name;
     public Text _dialog;
-    public Image _headImage;
     int i = 1;
 
 
@@ -23,9 +21,7 @@ public class _next : MonoBehaviour
 
     public void ReStartDialog()
     {
-        _Name.text = dialogs[0].Name;
-        _dialog.text = dialogs[0].dialog;
-        _headImage.sprite = dialogs[0].headImage;
+        _dialog.text = dialogs[0];
     }
 
 
@@ -37,9 +33,7 @@ public class _next : MonoBehaviour
     {
         if (i < dialogs.Length)
         {
-            _Name.text = dialogs[i].Name;
-            _dialog.text = dialogs[i].dialog;
-            _headImage.sprite = dialogs[i].headImage;
+            _dialog.text = dialogs[i];
             i++;
             return;
         }
